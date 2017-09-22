@@ -1,3 +1,10 @@
 {
-    "doctor": "who"
+    "doctor": "who",
+    "dalek": {
+        "exterminate": {
+            "exterminate": {
+                "exterminate": true
+            }
+        }
+    }
 }

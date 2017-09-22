@@ -1,6 +1,6 @@
 {
   "name": "rocket-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rocket's own version of a config module.",
   "main": "./lib/rocket",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lardst/rocket-config#readme",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "extend": "^3.0.1",
     "glob-fs": "^0.1.7"
   },
