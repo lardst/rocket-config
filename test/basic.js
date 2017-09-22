@@ -24,8 +24,14 @@ describe("Rocket config method tests.", function () {
     });
 
     it("Using the 'stage' environment there should be a 'gamora' property.", function (done) {
-        rocket = require("../")('./test/config/', 'stage')
+        rocket = require("../")('./test/config/', {env: 'stage'})
         rocket.config.should.have.property('gamora');
+        done();
+    });
+
+    it("Using the 'foo' config with 'debian' OS there should be a 'fighters' property.", function (done) {
+        rocket = require("../")('./test/config/foo', {os: 'debian'})
+        rocket.foo.should.have.property('fighters');
         done();
     });
 });

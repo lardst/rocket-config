@@ -10,7 +10,7 @@
     "indent": 2,
     "latedef": false,
     "laxbreak": false,
-    "maxcomplexity": 21,
+    "maxcomplexity": 8,
     "maxdepth": 6,
     "maxlen": 120,
     "newcap": true,

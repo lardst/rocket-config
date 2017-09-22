@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         }
     });
 
-  grunt.registerTask('js', 'Runs jscs and jshint', [
+  grunt.registerTask('test', 'Runs jscs and jshint', [
     'jscs',
     'jshint'
   ]);
