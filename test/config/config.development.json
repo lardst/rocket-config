@@ -1,4 +1,10 @@
 {
-    "yondu": "Real daddy",
-    "starlord": "Son of Yondu."
+    "Rebels": {
+        "Nunb": [
+            {
+                "name": "Nien",
+                "roles": ["Co-pilot"]
+            }
+        ]
+    }
 }

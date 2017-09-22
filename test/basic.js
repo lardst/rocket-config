@@ -4,28 +4,28 @@ var mocha = require("mocha"),
 
 describe("Rocket config method tests.", function () {
     it("The 'config' data should be an object.", function (done) {
-        rocket.config.should.be.Object
+        rocket.config.should.be.an.Object
         done();
     });
 
-    it("The 'config' data should have a property 'groot' with a value of 'We are Groot'.", function (done) {
-        rocket.config.should.have.property('groot', 'We are Groot');
+    it("The 'config' data should have a property 'Rebels'.", function (done) {
+        rocket.config.should.have.property('Rebels');
         done();
     });
 
-    it("The 'global' data should have a property 'doctor' with a value of 'who'.", function (done) {
-        rocket.global.should.have.property('doctor', 'who');
+    it("The 'config' data should have a property 'Rebels.Solo[1].name' with a value of 'Han'.", function (done) {
+        rocket.config.Rebels.Solo[1].should.have.property('name', 'Han');
         done();
     });
 
-    it("The 'global' data should have a property 'ddalek.exterminate.exterminate.exterminate' that is a boolean.", function (done) {
-        rocket.global.dalek.exterminate.exterminate.exterminate.should.be.Boolean;
+    it("The 'config' data should have a property 'Rebels' that is an object.", function (done) {
+        rocket.config.Rebels.should.be.an.Object
         done();
     });
 
-    it("Using the 'stage' environment there should be a 'gamora' property.", function (done) {
+    it("Using the 'stage' environment there should be a 'Rougues' property.", function (done) {
         rocket = require("../")('./test/config/', {env: 'stage'})
-        rocket.config.should.have.property('gamora');
+        rocket.config.should.have.property('Rougues');
         done();
     });
 

@@ -1,3 +1,19 @@
 {
-    "groot": "I am Groot"
+    "Rebels": {
+        "Calrissian": [
+            {
+                "name": "Lando",
+                "roles": ["General"]
+            }
+        ]
+    },
+    "Empire": {
+        "Palpatine": [
+            {
+                "name": "Sheev",
+                "aka": "Darth Sidious",
+                "roles": ["Emperor"]
+            }
+        ]
+    }
 }

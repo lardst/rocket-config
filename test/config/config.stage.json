@@ -1,3 +1,16 @@
 {
-    "gamora": "green"
+    "Rougues": {
+        "Fett": [
+            {
+                "name": "Jengo",
+                "roles": ["Bounty Hunter", "Clone DNA supplier"],
+                "ship": "Firespray-31-class patrol and attack craft (Slave 1)"
+            },
+            {
+                "name": "Boba",
+                "roles": ["Bounty Hunter"],
+                "ship": "Firespray-31-class patrol and attack craft (Slave 1)"
+            }
+        ]
+    }
 }

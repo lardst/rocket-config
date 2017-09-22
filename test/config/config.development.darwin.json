@@ -1,3 +1,30 @@
 {
-    "groot": "We are Groot"
+    "Rebels": {
+        "Erso": [
+            {
+                "name": "Jyn",
+                "roles": ["Thief"]
+            }
+        ],
+        "Rook": [
+            {
+                "name": "Bodhi",
+                "roles": ["Former Imperial", "Pilot"]
+            }
+        ]
+    },
+    "Empire": {
+        "Krennic": [
+            {
+                "name": "Orson",
+                "roles": ["Director"]
+            }
+        ],
+        "Erso": [
+            {
+                "name": "Galen",
+                "roles": ["Scientist"]
+            }
+        ]
+    }
 }

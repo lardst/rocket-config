@@ -1,4 +1,4 @@
-# Rocket COnfig
+# Rocket Config
 [![NPM](https://www.npmjs.com/package/rocket-config.png?downloads=true&stars=true)](https://www.npmjs.com/package/rocket-config)
 
 ## Description
@@ -10,14 +10,103 @@ Node JS module to retrieve and process JSON config files.
 	npm install rocket-config
 
 # Usage
-This example loads and processes all of the ./config JSON files.
+This example loads and processes all of the JSON files in the ./config folder.
 
-```js
-	var rocketConfig = require('rocket-config')('./config');
+Giving that config.json contains the following data.
+```json
+{
+    "Rebels": {
+        "Skywalker": [
+            {
+                "name": "Luke",
+                "roles": ["Pilot", "Jedi Knight"],
+                "ship": "T-65B X-wing starfighter"
+            }
+        ],
+        "Solo": [
+            {
+                "name": "Leia",
+                "roles": ["General", "Resistance Leader"]
+            },
+            {
+                "name": "Han",
+                "roles": ["Smuggler", "Scoundrel", "Captain"],
+                "ship": "Corellian YT-1300f light freighter (Millennium Falcon)",
+                "bestFriend": "Chewbacca"
+            },
+            {
+                "name": "Ben",
+                "aka": "Kylo Ren",
+                "roles": ["Commander", "Knight of Ren"]
+            }
+        ]
+    },
+    "Empire": {
+        "Skywalker": [
+            {
+                "name": "Anakin",
+                "aka": "Darth Vader",
+                "roles": ["Sith Lord", "Galactic Jerk"],
+                "ship": "TIE Advanced x1"
+            }
+        ],
+        "Tarkin": [
+            {
+                "name": "Wilhuff",
+                "roles": ["General"]
+            }
+        ]
+    }
+}
 ```
+In order to access the Solo family data.
+```js
+	var rocketConfig = require('rocket-config')('./config'),
+		soloFamily = rocketConfig.config.Rebels.Solo;
+
+	/**
+		The variable "soloFamily" contains an array of the Solo family data.
+		[
+            {
+                "name": "Leia",
+                "roles": ["General", "Resistance Leader"]
+            },
+            {
+                "name": "Han",
+                "roles": ["Smuggler", "Scoundrel", "Captain"],
+                "ship": "Corellian YT-1300f light freighter (Millennium Falcon)",
+                "bestFriend": "Chewbacca"
+            },
+            {
+                "name": "Ben",
+                "aka": "Kylo Ren",
+                "roles": ["Commander", "Knight of Ren"]
+            }
+        ]
+	**/
+```
+
+"rocketConfig" is the data processor.
+"config" is the domain of the data that was retrieved.
+
+Everything after that is the body of the JSON data.
 
 # Returned Data Structure
     JSON data.
+
+# Options
+
+	domain - Retrieves all of the config files with the specified domain prefix.
+	env    - The working environment of the server, this is an override used for testing and debugging.
+	os     - The operating system of the server, this is an override used for testing and debugging.
+
+## Examples
+
+If you want to override the operating system config data, simply add the os key/value to the options.
+```js
+	var configOptions = {os: "debian"},
+		rocketConfig = require('rocket-config')('./config', configOptions);
+```
 
 ## License
 

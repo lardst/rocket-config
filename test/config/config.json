@@ -1,5 +1,44 @@
 {
-    "drax": "Tough as nails",
-    "groot": "Tree",
-    "starlord": "Demi god"
+    "Rebels": {
+        "Skywalker": [
+            {
+                "name": "Luke",
+                "roles": ["Pilot", "Jedi Knight"],
+                "ship": "T-65B X-wing starfighter"
+            }
+        ],
+        "Solo": [
+            {
+                "name": "Leia",
+                "roles": ["General", "Resistance Leader"]
+            },
+            {
+                "name": "Han",
+                "roles": ["Smuggler", "Scoundrel", "Captain"],
+                "ship": "Corellian YT-1300f light freighter (Millennium Falcon)",
+                "bestFriend": "Chewbacca"
+            },
+            {
+                "name": "Ben",
+                "aka": "Kylo Ren",
+                "roles": ["Commander", "Knight of Ren"]
+            }
+        ]
+    },
+    "Empire": {
+        "Skywalker": [
+            {
+                "name": "Anakin",
+                "aka": "Darth Vader",
+                "roles": ["Sith Lord", "Galactic Jerk"],
+                "ship": "TIE Advanced x1"
+            }
+        ],
+        "Tarkin": [
+            {
+                "name": "Wilhuff",
+                "roles": ["General"]
+            }
+        ]
+    }
 }
