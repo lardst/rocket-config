@@ -1,6 +1,6 @@
 {
   "name": "rocket-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Rocket's own version of a config module.",
   "main": "./lib/rocket",
   "scripts": {
